@@ -1,0 +1,350 @@
+.wcf-filter-sidebar {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.wcf-selected-category-container {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+}
+
+.wcf-selected-category-container:before,
+.wcf-selected-category-container:after {
+    content: "";
+    display: table;
+}
+
+.wcf-selected-category-container:after {
+    clear: both;
+}
+
+.wcf-category-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+/* Ensure proper display in different theme contexts */
+.wcf-selected-category-container .wcf-selected-category {
+    background: transparent;
+    padding: 10px 0;
+}
+
+/* Ensure the title is visible and properly styled */
+.wcf-selected-category-container .wcf-category-title {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* More specific styles for better theme compatibility */
+.wcf-selected-category-container {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Ensure the title is visible and properly positioned */
+.wcf-selected-category {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wcf-selected-category-container {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+}
+
+/* Additional styles for better visibility */
+.wcf-category-title {
+    font-size: 1.8em !important;
+    color: #333 !important;
+    line-height: 1.2 !important;
+}
+
+.wcf-parent-category,
+.wcf-current-category {
+    color: inherit !important;
+}
+
+/* Ensure the container is positioned correctly */
+.woocommerce .wcf-selected-category-container {
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+}
+
+/* Specific styles for Woodmart theme compatibility */
+.woodmart-template-shop .wcf-selected-category-container,
+.woodmart-template-product-category .wcf-selected-category-container,
+.woodmart-theme .wcf-selected-category-container {
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+    padding-top: 10px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid #eee !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Ensure the title is visible in Woodmart theme */
+.woodmart-template-shop .wcf-category-title,
+.woodmart-template-product-category .wcf-category-title,
+.woodmart-theme .wcf-category-title {
+    font-size: 2em !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+}
+
+/* Ensure the container is visible in Woodmart theme */
+body[class*="woodmart"] .wcf-selected-category-container,
+.woodmart-theme .wcf-selected-category-container {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Additional Woodmart theme compatibility */
+.woodmart-theme .wcf-filter-sidebar {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+/* Ensure checkboxes are visible in Woodmart theme */
+.woodmart-theme .wcf-category-checkbox {
+    display: inline-block !important;
+    visibility: visible !important;
+    position: relative !important;
+}
+
+/* Ensure filter form is visible in Woodmart theme */
+.woodmart-theme .wcf-filter-form {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.wcf-parent-category {
+    color: #666;
+    text-decoration: none;
+}
+
+.wcf-category-separator {
+    margin: 0 5px;
+    color: #999;
+}
+
+.wcf-category-description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.wcf-filter-section {
+    margin-bottom: 25px;
+}
+
+.wcf-filter-title {
+    font-size: 1.1em;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Woodmart theme specific styles */
+.woodmart-theme .wcf-selected-category-container-wrapper {
+    margin-bottom: 20px;
+}
+
+.woodmart-theme .wcf-selected-category-container-wrapper .wcf-selected-category {
+    background: transparent;
+    padding: 15px 0;
+}
+
+.woodmart-theme .wcf-selected-category-container-wrapper .wcf-category-title {
+    font-size: 2em;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.woodmart-theme .wcf-filter-shortcode .wcf-selected-category-container-wrapper {
+    margin-bottom: 15px;
+}
+
+.woodmart-theme .wcf-filter-shortcode .wcf-selected-category-container-wrapper .wcf-selected-category {
+    padding: 10px 0;
+}
+
+.wcf-category-group {
+    margin-bottom: 10px;
+}
+
+.wcf-category-parent {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.wcf-toggle-subcategories {
+    float: right;
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+
+.wcf-toggle-subcategories:before,
+.wcf-toggle-subcategories:after {
+    content: '';
+    position: absolute;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.wcf-toggle-subcategories:before {
+    width: 11px;
+    height: 1px;
+    left: 2px;
+    top: 7px;
+}
+
+.wcf-toggle-subcategories:after {
+    width: 1px;
+    height: 11px;
+    left: 7px;
+    top: 2px;
+}
+
+.wcf-category-group.active .wcf-toggle-subcategories:after {
+    transform: rotate(90deg);
+}
+
+.wcf-subcategories {
+    margin-left: 15px;
+    display: none;
+}
+
+.wcf-category-child {
+    display: block;
+    margin: 5px 0;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.wcf-filter-actions {
+    margin-top: 20px;
+}
+
+.wcf-filter-actions .button {
+    margin-right: 10px;
+}
+
+/* Loading state */
+.wcf-filter-sidebar.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.wcf-filter-sidebar.loading:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.7) url(../images/spinner.gif) center no-repeat;
+}
+
+/* Shortcode specific styles */
+.wcf-filter-shortcode {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.wcf-filter-shortcode .wcf-filter-title {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.wcf-filter-shortcode .wcf-filter-actions {
+    margin-top: 15px;
+}
+
+.wcf-filter-shortcode .wcf-reset-filters {
+    margin-top: 10px;
+}
+
+/* Make sure shortcode filters look good in widgets */
+.widget .wcf-filter-shortcode {
+    padding: 10px;
+    background: transparent;
+    border: none;
+}
+
+.widget .wcf-filter-shortcode .wcf-filter-section {
+    margin-bottom: 15px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .wcf-filter-sidebar {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Additional Woodmart theme specific styles */
+.woodmart-theme .wcf-filter-sidebar {
+    margin-bottom: 30px;
+}
+
+.woodmart-theme .wcf-category-group {
+    margin-bottom: 15px;
+}
+
+.woodmart-theme .wcf-category-parent {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.woodmart-theme .wcf-category-child {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.woodmart-theme .wcf-filter-actions {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Select All checkbox styles */
+.wcf-select-all-container {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.wcf-select-all {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.wcf-select-all-checkbox {
+    margin-right: 8px;
+}
